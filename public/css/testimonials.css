@@ -1,0 +1,92 @@
+@import url("./app.css");
+
+.track-card-testimoni {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin: 50px 0px;
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+}
+
+.testimonial-wrapper {
+    overflow: hidden;
+}
+
+.testimonial-card {
+    min-width: calc(33.333% - 20px);
+    margin: 0 10px;
+    min-height: 150px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 75%,
+        61% 77%,
+        25% 99%,
+        27% 75%,
+        0% 75%
+    );
+}
+
+.content .kutip {
+    font-size: 2em;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.content .name {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 4px;
+    font-weight: 150;
+}
+
+.content .message {
+    font-size: 0.8em;
+
+    text-align: center;
+}
+.content {
+    padding: 0px 10px;
+}
+
+.dot-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #666;
+}
+@media only screen and (max-width: 900px) {
+    .testimonial-card {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .testimonial-card {
+        width: 80%;
+    }
+}

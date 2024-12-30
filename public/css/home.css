@@ -1,0 +1,56 @@
+@import url("./app.css");
+
+.container {
+    height: calc(100vh - 100px);
+    margin: 0px 30px;
+}
+
+.brand-name {
+    font-size: 3rem;
+    font-family: var(--callove);
+    color: var(--primary);
+    text-align: center;
+}
+.line-text {
+    font-size: 3rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.img-thumbnail img {
+    width: 550px;
+    height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .brand-name {
+        font-size: 2em;
+    }
+    .line-text {
+        font-size: 2em;
+    }
+
+    .img-thumbnail img {
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .brand-name {
+        font-size: 1.3em;
+    }
+    .line-text {
+        font-size: 1.3em;
+    }
+
+    .img-thumbnail img {
+        width: 300px;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}

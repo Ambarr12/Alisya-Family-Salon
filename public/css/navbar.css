@@ -1,0 +1,233 @@
+@import url("./app.css");
+.navbar {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+    height: 50px;
+    box-shadow: var(--shadow-md);
+    position: fixed;
+    width: 98%;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-family: var(--Henny-Penny);
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    padding: 6px 5px;
+    border-radius: 6px;
+    font-family: var(--DynaPuff);
+}
+
+.navbar-links li a:hover {
+    background-color: var(--neutral);
+}
+
+.container-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-action li button {
+    background-color: transparent;
+    color: white;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font-family: var(--DynaPuff);
+}
+
+.btn-action li button:hover {
+    background-color: var(--neutral);
+}
+
+.btn-action li .user-initial {
+    background-color: var(--secondary);
+    border-radius: 999px;
+}
+
+.btn-action {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    display: none;
+    z-index: 1500;
+}
+
+.search-container input {
+    width: 70%;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    margin-top: -200px;
+    padding: 0px 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.menu-user {
+    position: relative;
+}
+
+.menu-user .container-menu-user {
+    position: absolute;
+    z-index: 2600;
+    top: 55px;
+    right: 20px;
+    background-color: white;
+    box-shadow: var(--shadow-md);
+    width: 150px;
+    min-height: 40px;
+    padding: 10px;
+    border-radius: 4px;
+    color: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+}
+
+.container-menu-user a {
+    padding: 10px 5px;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.container-menu-user a:hover {
+    background-color: var(--neutral);
+}
+
+@keyframes show-search {
+    0% {
+        margin-top: -200px;
+    }
+    100% {
+        margin-top: 50px;
+    }
+}
+
+@keyframes hide-search {
+    0% {
+        margin-top: 50px;
+    }
+    20% {
+        margin-top: 70px;
+    }
+    100% {
+        margin-top: -200px;
+    }
+}
+
+.footers {
+    background-color: var(--primary);
+    text-align: center;
+    font-family: var(--DynaPuff);
+    font-size: 1.4em;
+    padding: 20px 0px;
+    color: white;
+    width: 100%;
+}
+
+.bars {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar-brand {
+        font-size: 1.3em;
+    }
+
+    .navbar-links li a {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .bars {
+        display: block;
+        font-size: 1.6em;
+        padding: 5px 8px;
+    }
+
+    .bars:hover {
+        background-color: var(--neutral);
+
+        border-radius: 100px;
+    }
+
+    .container-links {
+        gap: 0px;
+        margin-right: 10px;
+    }
+    .btn-action {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primary);
+        display: none;
+        padding-bottom: 20px;
+    }
+
+    .footers {
+        font-size: 1em;
+    }
+}

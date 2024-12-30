@@ -1,0 +1,71 @@
+@import url("./app.css");
+
+.container-about {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.title {
+    color: var(--primary);
+    font-family: var(--DynaPuff);
+    font-weight: 100;
+    margin-bottom: 30px;
+    font-size: 2em;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.text-content {
+    color: var(--neutral);
+    font-size: 1.2em;
+    text-align: justify;
+    word-spacing: -1px;
+    hyphens: auto;
+    font-family: var(--DynaPuff);
+    font-weight: 50;
+}
+.text-about {
+    width: 70%;
+    margin-left: 15%;
+    word-spacing: -1px;
+    hyphens: auto;
+}
+.point {
+    gap: 40px;
+}
+
+.img-point {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .title {
+        font-size: 1.5em;
+    }
+    .text-content {
+        font-size: 1.2em;
+    }
+
+    .point {
+        flex-wrap: wrap;
+    }
+    .text-about {
+        width: 80%;
+        margin-left: 10%;
+        word-spacing: -1px;
+        hyphens: auto;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-about {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

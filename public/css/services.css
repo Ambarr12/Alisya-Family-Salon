@@ -1,0 +1,115 @@
+@import url("./app.css");
+
+.cards-container {
+    margin: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.card {
+    display: flex;
+    background-color: var(--primary);
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card-image {
+    display: flex;
+    align-items: center;
+}
+
+.card-image img {
+    width: 250px;
+    margin: 8px;
+}
+
+.card-content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.card-content h3 {
+    margin: 7px 0px;
+    color: white;
+    font-family: var(--DynaPuff);
+    font-weight: 200;
+}
+
+.card-content ul {
+    margin: 0px 10px;
+    list-style: none;
+    color: white;
+}
+
+.card-content li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.card-content li p {
+    font-family: var(--DynaPuff);
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.card-content li p:nth-child(1)::before {
+    content: "🎀 ";
+    font-size: 0.9em;
+    color: pink;
+}
+
+.book-now {
+    background-color: var(--neutral);
+    padding: 8px 10px;
+    border: none;
+    color: white;
+    margin: 10px 3px;
+    border-radius: 6px;
+}
+
+@media only screen and (max-width: 900px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-image img {
+        width: 300px;
+        height: 300px;
+        margin: 8px;
+    }
+    .card-content {
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cards-container {
+        margin: 0px 0px;
+        grid-template-rows: repeat(3, 1fr); /* Tetap 2 baris */
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 99%;
+    }
+    .card-image img {
+        width: 360px;
+    }
+
+    .card-content {
+        margin-left: 10%;
+        width: 80%;
+    }
+}

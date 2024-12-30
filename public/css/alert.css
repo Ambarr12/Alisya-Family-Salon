@@ -1,0 +1,40 @@
+@import url("./app.css");
+.alert {
+    position: fixed;
+    top: 20px;
+    width: 200px;
+    min-height: 40px;
+    z-index: 2500;
+    box-shadow: var(--shadow-md);
+    border-radius: 4px;
+    padding: 10px;
+    right: 99999px;
+    background-color: white;
+}
+
+.alert .close {
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    font-size: 2em;
+    font-family: sans-serif !important;
+}
+
+.alert-show {
+}
+
+@keyframes alert-show {
+    0%,
+    100% {
+        right: -9999px;
+    }
+
+    20%,
+    70% {
+        right: 20px;
+    }
+}

@@ -1,0 +1,112 @@
+@import url("./app.css");
+
+.contact-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.map-container {
+    overflow: hidden;
+    max-width: 100%;
+    width: 450px; /* Ganti ini saja untuk merubah ukuran */
+    height: 450px; /* Ganti ini saja untuk merubah ukuran */
+    background-color: var(--primary);
+}
+
+#my-map-display {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+#my-map-display img {
+    max-width: none !important;
+    background: none !important;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+#my-map-display iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+.container-form-contact {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    gap: 10px;
+}
+
+.container-form-contact .input-contact {
+    height: 35px;
+    border-radius: 4px;
+    padding: 0px 6px;
+    border: none;
+    outline: none;
+    background-color: var(--base);
+}
+
+.container-form-contact .textarea-contact {
+    padding: 6px 6px;
+    border: none;
+    outline: none;
+    background-color: var(--base);
+}
+
+.container-form-contact .btn-send {
+    width: 80px;
+    height: 40px;
+    background-color: var(--primary);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--base);
+    margin-left: calc(100% - 80px);
+}
+
+.container-form-contact .btn-send:hover {
+    animation: btn-click 0.1s both;
+    transition: all 0.1s ease-in-out;
+}
+
+@keyframes btn-click {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .map-container {
+        max-width: 100%;
+        width: 350px; /* Ganti ini saja untuk merubah ukuran */
+        height: 350px; /* Ganti ini saja untuk merubah ukuran */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .map-container {
+        max-width: 100%;
+        width: 350px; /* Ganti ini saja untuk merubah ukuran */
+        height: 350px; /* Ganti ini saja untuk merubah ukuran */
+    }
+
+    .container-form-contact {
+        width: 87%;
+    }
+}

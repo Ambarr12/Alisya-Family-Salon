@@ -55,7 +55,10 @@ RUN rm /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default \
     && ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 
 # Add custom PHP configuration for max_upload_filesize
-RUN echo "upload_max_filesize = 100M" > /usr/local/etc/php/conf.d/upload_max_filesize.ini
+RUN echo "upload_max_filesize=100M" > /usr/local/etc/php/conf.d/upload_max_filesize.ini
+RUN echo "post_max_size = 120M" > /usr/local/etc/php/conf.d/post_max_size.ini
+RUN echo "memory_limit = 256M" > /usr/local/etc/php/conf.d/memory_limit.ini
+
 
 # Expose port 80
 EXPOSE 80

@@ -42,11 +42,7 @@ class Login extends SimplePage
     public function mount(): void
     {
         if (Filament::auth()->check()) {
-            if (auth()->user()->role == "User") {
-                redirect()->to("/");
-            } else {
-                redirect()->intended(Filament::getUrl());
-            }
+            redirect()->intended(Filament::getUrl());
         }
 
         $this->form->fill();
